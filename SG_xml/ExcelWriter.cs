@@ -1647,7 +1647,7 @@ namespace SG_xml
             cell.StyleID = "s40";
             cell = Row7.Cells.Add();
             cell.StyleID = "s40";
-            Row7.Cells.Add("Län", DataType.String, "s40");
+            Row7.Cells.Add("VAT", DataType.String, "s40");
             cell = Row7.Cells.Add();
             cell.StyleID = "s40";
             cell = Row7.Cells.Add();
@@ -1673,7 +1673,7 @@ namespace SG_xml
             cell.StyleID = "s35";
             cell = Row8.Cells.Add();
             cell.StyleID = "s35";
-            Row8.Cells.Add(drowOfCData["Län"].ToString(), DataType.String, "s35");
+            Row8.Cells.Add(drowOfCData["VAT"].ToString(), DataType.String, "s35");
             cell = Row8.Cells.Add();
             cell.StyleID = "s35";
             cell = Row8.Cells.Add();

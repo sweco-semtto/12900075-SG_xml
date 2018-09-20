@@ -35,7 +35,7 @@ namespace SG_xml
 		private string _Postnummer;
 		private string _Ort;
 		private string _Region_Förvaltning;
-		private string _Län;
+		private string _VAT;
 		private string _Distrikt_Område;
 		private string _Beställningsreferens;
 		private string _Kontaktperson1;
@@ -83,13 +83,13 @@ namespace SG_xml
             // Bygger upp grunden för sqkl.kommandot
             string SQLSats = "INSERT INTO Företag (Ordernr, Beställningsreferens, Beställningsdatum, Tidsstämpel, ";
             SQLSats += "Företagsnamn, Faktureringsadress, Postnummer, Ort, Region_Förvaltning, Distrikt_Område, ";
-            SQLSats += "Län, Kontaktperson1, TelefonArb1, TelefonMobil1, TelefonHem1, Epostadress1, Kontaktperson2, ";
+            SQLSats += "VAT, Kontaktperson1, TelefonArb1, TelefonMobil1, TelefonHem1, Epostadress1, Kontaktperson2, ";
             SQLSats += "TelefonArb2, TelefonMobil2, TelefonHem2, Epostadress2, Kommentar) VALUES (";
 
             // Lägger till alla uppgifter ifrån beställningen. 
             SQLSats += "@_Ordernummer, @_Beställningsreferens, @_Beställningsdatum, @_Tidsstämpel, @_Företagsnamn, ";
             SQLSats += "@_Faktureringsadress, @_Postnummer, @_Ort, @_Region_Förvaltning, @_Distrikt_Område, ";
-            SQLSats += "@_Län, @_Kontaktperson1, @_TelefonArb1, @_TelefonMob1, ";
+            SQLSats += "@_VAT, @_Kontaktperson1, @_TelefonArb1, @_TelefonMob1, ";
             SQLSats += "@_TelefonHem1, @_Epost1, @_Kontaktperson2, ";
             SQLSats += "@_TelefonArb2, @_TelefonMob2, @_TelefonHem2, @_Epost2, @_Kommentar)";
 
@@ -107,7 +107,7 @@ namespace SG_xml
             kommando.Parameters.Add("@_Ort", OleDbType.VarChar);
             kommando.Parameters.Add("@_Region_Förvaltning", OleDbType.VarChar);
             kommando.Parameters.Add("@_Distrikt_Område", OleDbType.VarChar);
-            kommando.Parameters.Add("@_Län", OleDbType.VarChar);
+            kommando.Parameters.Add("@_VAT", OleDbType.VarChar);
             kommando.Parameters.Add("@_Kontaktperson1", OleDbType.VarChar);
             kommando.Parameters.Add("@_TelefonArb1", OleDbType.VarChar);
             kommando.Parameters.Add("@_TelefonMob1", OleDbType.VarChar);
@@ -134,7 +134,7 @@ namespace SG_xml
             kommando.Parameters[7].Value = _Ort;
             kommando.Parameters[8].Value = _Region_Förvaltning;
             kommando.Parameters[9].Value = _Distrikt_Område;
-            kommando.Parameters[10].Value = _Län;
+            kommando.Parameters[10].Value = _VAT;
             kommando.Parameters[11].Value = _Kontaktperson1;
             kommando.Parameters[12].Value = _TelefonArb1;
             kommando.Parameters[13].Value = _TelefonMob1;
@@ -253,9 +253,9 @@ namespace SG_xml
                 xmlNode = xmlDoc.SelectSingleNode("Beställning/child::Företag/child::Region_Förvaltning");
                 _Region_Förvaltning = xmlNode != null ? xmlNode.InnerText : string.Empty;
 
-                // Läser in län
-                xmlNode = xmlDoc.SelectSingleNode("Beställning/child::Företag/child::Län");
-                _Län = xmlNode != null ? xmlNode.InnerText : string.Empty;
+                // Läser in VAT
+                xmlNode = xmlDoc.SelectSingleNode("Beställning/child::Företag/child::VAT");
+                _VAT = xmlNode != null ? xmlNode.InnerText : string.Empty;
 
                 // Lässer in distrikt/område
                 xmlNode = xmlDoc.SelectSingleNode("Beställning/child::Företag/child::Distrikt_Område");
@@ -428,13 +428,13 @@ namespace SG_xml
 		}
 
         /// <summary>
-        /// Hämtar länet. 
+        /// Hämtar VAT-numret. 
         /// </summary>
-        public string Län
+        public string VAT
 		{
 			get
 			{
-                return _Län;
+                return _VAT;
             } 
 		}
 
