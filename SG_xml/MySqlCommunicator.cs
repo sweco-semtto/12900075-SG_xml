@@ -72,7 +72,7 @@ namespace SG_xml
         /// </summary>
         /// <param name="orderInXML">Ordern som skall backupas. </param>
         /// <returns>Returnerar true om allt gick bra. </returns>
-        public static bool BackupOrderToMySql(string orderInXML)
+        public static bool BackupOrderToMySql(string orderInXML, string ordernummer)
         {
             bool ans = true;
 
@@ -82,7 +82,7 @@ namespace SG_xml
 
             try
             {
-                _Current_Ordernumber = "100";
+                _Current_Ordernumber = ordernummer;
 
                 // Skickar en request och tar emot ett response.
                 string timestamp = GetAnswerStringFromPHPResponse(SendRequestToPHP(_Url_To_Get_Current_Time));

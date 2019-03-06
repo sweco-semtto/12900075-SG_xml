@@ -339,10 +339,21 @@ namespace SG_xml
             }
 		}
 
-        /// <summary>
-        /// Hämtar kontaktpersons etts e-postadress. 
-        /// </summary>
-        public string EpostKontaktperson1
+		/// <summary>
+		/// Hämtar ordernummret. 
+		/// </summary>
+		public string Ordernummer
+		{
+			get
+			{
+				return _Ordernummer;
+			}
+		}
+
+		/// <summary>
+		/// Hämtar kontaktpersons etts e-postadress. 
+		/// </summary>
+		public string EpostKontaktperson1
         {
             get
             {

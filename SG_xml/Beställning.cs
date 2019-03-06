@@ -61,7 +61,7 @@ namespace SG_xml
                 return;
 
             // Skriver xml-en till MySql som en backup. 
-            bool success = MySqlCommunicator.BackupOrderToMySql(xml);
+            bool success = MySqlCommunicator.BackupOrderToMySql(xml, _Företag.Ordernummer);
             if (!success)
             {
                 MessageBox.Show("Kan inte skapa en backup på ordern i MySql. ", "Problem med MySql", MessageBoxButtons.OK, MessageBoxIcon.Error);

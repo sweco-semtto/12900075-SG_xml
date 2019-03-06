@@ -46,19 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_77F66F80521910C4383F77FADE9DA9CA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_14FE7EAE1589625E1D520C08BB9E33FD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1DDA64C4599DD25C27AA2EDCFBD019ED"
+        "OwnerKey" = "8:_9E53A3378F07C294B9D2EDA15AA4819C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +58,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9E53A3378F07C294B9D2EDA15AA4819C"
+        "OwnerKey" = "8:_1DDA64C4599DD25C27AA2EDCFBD019ED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_14FE7EAE1589625E1D520C08BB9E33FD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_77F66F80521910C4383F77FADE9DA9CA"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -150,7 +150,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:2.0.50727                         "
+                "FrameworkVersion" = "8:2.0.50727                          "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=9832"
                 }
@@ -389,15 +389,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SG xml"
-        "ProductCode" = "8:{BA35A233-F9A6-4A91-8D80-C64630D1BB5C}"
-        "PackageCode" = "8:{E07F45C7-0390-410C-B128-33FC8D1FC48B}"
+        "ProductCode" = "8:{AFD3FA33-7895-4CF6-8A97-3E040700CBE5}"
+        "PackageCode" = "8:{5F66FC99-F846-4290-88B3-E3D1C07726B7}"
         "UpgradeCode" = "8:{7C95C10E-DFFE-4480-9AC2-E16D443F128B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:2.2.3"
+        "ProductVersion" = "8:2.2.4"
         "Manufacturer" = "8:Sweco"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
