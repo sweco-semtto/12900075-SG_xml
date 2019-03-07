@@ -71,7 +71,7 @@ namespace SG_xml
                     //_FelISQL = true;
                     _Felmeddelande = oledbe.Message;
 
-                    MessageBox.Show("Misslyckades läsa ifrån databas.\n\n" + oledbe.Message, "Misslyckades skriva till databas", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Misslyckades läsa ifrån databas. (felnummer 1)\n\n" + oledbe.Message, "Misslyckades skriva till databas", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
             }
             finally
@@ -116,14 +116,14 @@ namespace SG_xml
                 _FelISQL = true;
                 _Felmeddelande = oledbex.Message;
 
-                MessageBox.Show("Misslyckades skriva till databas.\n\n" + oledbex.Message, "Misslyckades skriva till databas", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Misslyckades skriva till databas. (felnummer 2)\n\n" + oledbex.Message, "Misslyckades skriva till databas", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             catch (InvalidOperationException ioex)
             {
                 _FelISQL = true;
                 _Felmeddelande = ioex.Message;
 
-                MessageBox.Show("Misslyckades skriva till databas.\n\n" + ioex.Message, "Misslyckades skriva till databas", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Misslyckades skriva till databas. (felnummer 3)\n\n" + ioex.Message, "Misslyckades skriva till databas", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             catch (FormatException fex)
             {

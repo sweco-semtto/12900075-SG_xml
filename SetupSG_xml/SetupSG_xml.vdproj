@@ -21,7 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_77F66F80521910C4383F77FADE9DA9CA"
+        "MsmKey" = "8:_90AB9F4BCC1E6FE5FD7D26AE2E635587"
         "OwnerKey" = "8:_EC193434EEE74789969D2689E3A891D6"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_77F66F80521910C4383F77FADE9DA9CA"
+        "OwnerKey" = "8:_90AB9F4BCC1E6FE5FD7D26AE2E635587"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -150,7 +150,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:2.0.50727                          "
+                "FrameworkVersion" = "8:2.0.50727                           "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=9832"
                 }
@@ -220,20 +220,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_77F66F80521910C4383F77FADE9DA9CA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7AE1B4D5C7436C7B96320252C26A8366"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_77F66F80521910C4383F77FADE9DA9CA"
+                    "_7AE1B4D5C7436C7B96320252C26A8366"
                     {
-                    "Name" = "8:CarlosAg.ExcelXmlWriter.dll"
+                    "Name" = "8:Microsoft.Vbe.Interop.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:CarlosAg.ExcelXmlWriter.dll"
+            "SourcePath" = "8:Microsoft.Vbe.Interop.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_297E54467267466A907436A463096165"
@@ -251,20 +251,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7AE1B4D5C7436C7B96320252C26A8366"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_90AB9F4BCC1E6FE5FD7D26AE2E635587"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral"
                 "ScatterAssemblies"
                 {
-                    "_7AE1B4D5C7436C7B96320252C26A8366"
+                    "_90AB9F4BCC1E6FE5FD7D26AE2E635587"
                     {
-                    "Name" = "8:Microsoft.Vbe.Interop.dll"
+                    "Name" = "8:CarlosAg.ExcelXmlWriter.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Microsoft.Vbe.Interop.dll"
+            "SourcePath" = "8:CarlosAg.ExcelXmlWriter.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_297E54467267466A907436A463096165"
@@ -389,15 +389,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SG xml"
-        "ProductCode" = "8:{AFD3FA33-7895-4CF6-8A97-3E040700CBE5}"
-        "PackageCode" = "8:{5F66FC99-F846-4290-88B3-E3D1C07726B7}"
+        "ProductCode" = "8:{9B2D33CB-4CE5-46B5-A19F-60DF68069C44}"
+        "PackageCode" = "8:{A2DFC28E-AB3E-4554-BA1E-EF49BE36A0F2}"
         "UpgradeCode" = "8:{7C95C10E-DFFE-4480-9AC2-E16D443F128B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:2.2.4"
+        "ProductVersion" = "8:2.2.5"
         "Manufacturer" = "8:Sweco"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
