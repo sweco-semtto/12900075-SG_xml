@@ -110,7 +110,7 @@ namespace SG_xml
                 
             }
 
-            MessageBox.Show("Beställningen är inlagd i båda databaserna (MySql och Access). ", "Inlagd beställning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Beställningen är inlagd i Access-databasen och ordernumret i MySql. ", "Inlagd beställning", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
