@@ -60,16 +60,23 @@ namespace SG_xml
             if (ReservObjekt.FelIXML)
                 return;
 
-            // Skriver xml-en till MySql som en backup. 
-            bool success = MySqlCommunicator.BackupOrderToMySql(xml, _Företag.Ordernummer);
-            if (!success)
-            {
-                MessageBox.Show("Kan inte skapa en backup på ordern i MySql. ", "Problem med MySql", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+			// Kontrollerar om order redan finns med sedan innan i Accress
+			if (Accessdatabas.FinnsOrdernummer(_Företag))
+			{
+				MessageBox.Show("Beställningen finns redan i Access-databasen. ", "Beställning redan inlagd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
 
-            // Skriver företagsuppgifterna (uppgifter från xml:en och en tidsstämpel) till databasen. 
-            Accessdatabas.SkrivTillDatabas(_Företag.ByggUppSQL());
+			// Skriver xml-en till MySql som en backup. 
+			bool success = MySqlCommunicator.BackupOrderToMySql(xml, _Företag.Ordernummer);
+			if (!success)
+			{
+				MessageBox.Show("Kan inte skapa en backup på ordern i MySql. ", "Problem med MySql", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			// Skriver företagsuppgifterna (uppgifter från xml:en och en tidsstämpel) till databasen. 
+			Accessdatabas.SkrivTillDatabas(_Företag.ByggUppSQL());
             if (Accessdatabas.FelISQL)
                 return;
 
@@ -77,7 +84,6 @@ namespace SG_xml
             string ordernummer = _Företag.HämtaOrdernummer(Accessdatabas.LäsIfrånDatabas);
             if (Accessdatabas.FelISQL)
                 return;
-            //Databas.SkrivTillDatabas(_Företag.ByggUppSQLLäggTillOrdernummer(ordernummer));
 
             // Skriver in alla startplatser till databasen.   
             foreach (Startplats startsplats in _Startplatser)
