@@ -67,7 +67,7 @@ namespace SG_xml
 				return;
 			}
 
-			// Skriver xml-en till MySql som en backup. 
+			//Skriver xml-en till MySql som en backup.
 			bool success = MySqlCommunicator.BackupOrderToMySql(xml, _Företag.Ordernummer);
 			if (!success)
 			{
