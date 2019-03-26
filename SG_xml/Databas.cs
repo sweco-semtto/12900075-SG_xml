@@ -86,6 +86,21 @@ namespace SG_xml
             return null;
         }
 
+		/// <summary>
+		/// Avgör om det finns ett ordernummer redan är beställt, d.v.s. finns i Access-databasen. 
+		/// </summary>
+		/// <param name="Företag">Beställning från ett företg. </param>
+		/// <returns></returns>
+		public static bool FinnsOrdernummer(Företag Företag)
+		{
+			DataSet datasetOrdernummer = Accessdatabas.LäsIfrånDatabas(Företag.FinnsOrder());
+
+			if (datasetOrdernummer.Tables.Count > 0 && datasetOrdernummer.Tables[0].Rows.Count > 0)
+				return true;
+
+			return false;
+		}
+
         /// <summary>
         /// Skriver en beställning till databasen. 
         /// </summary>

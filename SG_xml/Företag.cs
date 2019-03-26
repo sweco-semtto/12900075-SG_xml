@@ -71,6 +71,16 @@ namespace SG_xml
             return nyttObjekt;
         }
 
+		/// <summary>
+		/// Bygger upp ett SQL-kommand som kontrollear om ordern redan finns i databasen sedan innan. 
+		/// </summary>
+		/// <returns></returns>
+		public string FinnsOrder()
+		{
+			// Bygger upp grunden för sqkl.kommandot
+			return "SELECT TOP 1 * FROM Företag WHERE Ordernr='" + this.Ordernummer + "'";
+		}
+
         /// <summary>
         /// Bygger upp ett SQL-kommando (OleDbCommand) utifrån en beställning. 
         /// </summary>
@@ -93,8 +103,8 @@ namespace SG_xml
             SQLSats += "@_TelefonHem1, @_Epost1, @_Kontaktperson2, ";
             SQLSats += "@_TelefonArb2, @_TelefonMob2, @_TelefonHem2, @_Epost2, @_Kommentar)";
 
-            // Anger kommandotexten. 
-            kommando.CommandText = SQLSats;
+			// Anger kommandotexten. 
+			kommando.CommandText = SQLSats;
 
             // Anger vilka typer som är legala i kommandot. 
             kommando.Parameters.Add("@_Ordernummer", OleDbType.VarChar);

@@ -21,8 +21,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_90AB9F4BCC1E6FE5FD7D26AE2E635587"
-        "OwnerKey" = "8:_EC193434EEE74789969D2689E3A891D6"
+        "MsmKey" = "8:_5F503C9E120B4370BC29C758EB4D1A0F"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -41,6 +41,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_EC193434EEE74789969D2689E3A891D6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5F503C9E120B4370BC29C758EB4D1A0F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_90AB9F4BCC1E6FE5FD7D26AE2E635587"
+        "OwnerKey" = "8:_EC193434EEE74789969D2689E3A891D6"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -150,7 +156,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:2.0.50727                           "
+                "FrameworkVersion" = "8:2.0.50727                            "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=9832"
                 }
@@ -220,20 +226,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7AE1B4D5C7436C7B96320252C26A8366"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5F503C9E120B4370BC29C758EB4D1A0F"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral"
                 "ScatterAssemblies"
                 {
-                    "_7AE1B4D5C7436C7B96320252C26A8366"
+                    "_5F503C9E120B4370BC29C758EB4D1A0F"
                     {
-                    "Name" = "8:Microsoft.Vbe.Interop.dll"
+                    "Name" = "8:CarlosAg.ExcelXmlWriter.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Microsoft.Vbe.Interop.dll"
+            "SourcePath" = "8:..\\SG_xml\\CarlosAg.ExcelXmlWriter.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_297E54467267466A907436A463096165"
@@ -248,23 +254,23 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_90AB9F4BCC1E6FE5FD7D26AE2E635587"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7AE1B4D5C7436C7B96320252C26A8366"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_90AB9F4BCC1E6FE5FD7D26AE2E635587"
+                    "_7AE1B4D5C7436C7B96320252C26A8366"
                     {
-                    "Name" = "8:CarlosAg.ExcelXmlWriter.dll"
+                    "Name" = "8:Microsoft.Vbe.Interop.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:CarlosAg.ExcelXmlWriter.dll"
+            "SourcePath" = "8:Microsoft.Vbe.Interop.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_297E54467267466A907436A463096165"
@@ -389,15 +395,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SG xml"
-        "ProductCode" = "8:{9B2D33CB-4CE5-46B5-A19F-60DF68069C44}"
-        "PackageCode" = "8:{A2DFC28E-AB3E-4554-BA1E-EF49BE36A0F2}"
+        "ProductCode" = "8:{EAB48843-CE44-4DEA-A769-8E1ABB178D77}"
+        "PackageCode" = "8:{26BBEFEA-A6BF-48EF-8F85-DDA6BFB853B4}"
         "UpgradeCode" = "8:{7C95C10E-DFFE-4480-9AC2-E16D443F128B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:2.2.5"
+        "ProductVersion" = "8:2.2.6"
         "Manufacturer" = "8:Sweco"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
