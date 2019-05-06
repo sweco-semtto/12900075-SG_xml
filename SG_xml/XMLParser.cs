@@ -954,9 +954,9 @@ namespace SG_xml
 
         }
 
-        
-
-
-
+        private void checkBoxTestData_CheckedChanged(object sender, EventArgs e)
+        {
+            MySqlCommunicator.OnlyTestData = checkBoxTestData.Checked;
+        }
     }
 }

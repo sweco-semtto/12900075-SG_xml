@@ -12,6 +12,12 @@ namespace SG_xml
     public class MySqlCommunicator
     {
         /// <summary>
+        /// Anger om inläsningen är endast till för testdata, d.v.s. ingen backup placeras i MySql och inget
+        /// ordernummer räknas upp. 
+        /// </summary>
+        public static bool OnlyTestData { get; set; }
+
+        /// <summary>
         /// Sökvägen till var skriptet för att få fram dagens datum ligger. 
         /// </summary>
         protected static string _Url_To_Get_Current_Time = "http://www.sg-systemet.com/bestallning/Gettime.php";

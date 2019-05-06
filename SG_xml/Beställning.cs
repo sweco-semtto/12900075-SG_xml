@@ -60,20 +60,23 @@ namespace SG_xml
             if (ReservObjekt.FelIXML)
                 return;
 
-			// Kontrollerar om order redan finns med sedan innan i Accress
+			// Kontrollerar om order redan finns med sedan innan i Access
 			if (Accessdatabas.FinnsOrdernummer(_Företag))
 			{
 				MessageBox.Show("Beställningen finns redan i Access-databasen. ", "Beställning redan inlagd", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				return;
 			}
 
-			//Skriver xml-en till MySql som en backup.
-			bool success = MySqlCommunicator.BackupOrderToMySql(xml, _Företag.Ordernummer);
-			if (!success)
-			{
-				MessageBox.Show("Kan inte skapa en backup på ordern i MySql. ", "Problem med MySql", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
+            //Skriver xml-en till MySql som en backup.
+            if (!MySqlCommunicator.OnlyTestData)
+            {
+                bool success = MySqlCommunicator.BackupOrderToMySql(xml, _Företag.Ordernummer);
+                if (!success)
+                {
+                    MessageBox.Show("Kan inte skapa en backup på ordern i MySql. ", "Problem med MySql", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
 
 			// Skriver företagsuppgifterna (uppgifter från xml:en och en tidsstämpel) till databasen. 
 			Accessdatabas.SkrivTillDatabas(_Företag.ByggUppSQL());
@@ -116,7 +119,10 @@ namespace SG_xml
                 
             }
 
-            MessageBox.Show("Beställningen är inlagd i Access-databasen och ordernumret i MySql. ", "Inlagd beställning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!MySqlCommunicator.OnlyTestData)
+                MessageBox.Show("Beställningen är inlagd i Access-databasen och ordernumret i MySql. ", "Inlagd beställning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Beställningen är inlagd i Access-databasen, inget ordernummer skapat i MySql. ", "Inlagd beställning", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

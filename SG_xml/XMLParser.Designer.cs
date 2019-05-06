@@ -48,6 +48,7 @@ namespace SG_xml
             this.buttonChooseExcelPath = new System.Windows.Forms.Button();
             this.textBoxExcelDirectory = new System.Windows.Forms.TextBox();
             this.labelSaveDirectory = new System.Windows.Forms.Label();
+            this.checkBoxTestData = new System.Windows.Forms.CheckBox();
             this.tabControlSG.SuspendLayout();
             this.tabPageXMLReader.SuspendLayout();
             this.tabPageExcelWriter.SuspendLayout();
@@ -55,13 +56,13 @@ namespace SG_xml
             // 
             // XMLSträng
             // 
-            this.XMLSträng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.XMLSträng.Location = new System.Drawing.Point(9, 19);
+            this.XMLSträng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.XMLSträng.Location = new System.Drawing.Point(9, 58);
             this.XMLSträng.Name = "XMLSträng";
             this.XMLSträng.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.XMLSträng.Size = new System.Drawing.Size(485, 383);
+            this.XMLSträng.Size = new System.Drawing.Size(485, 344);
             this.XMLSträng.TabIndex = 1;
             this.XMLSträng.Text = "";
             this.XMLSträng.TextChanged += new System.EventHandler(this.XMLSträng_TextChanged);
@@ -80,7 +81,7 @@ namespace SG_xml
             // Infotext
             // 
             this.Infotext.AutoSize = true;
-            this.Infotext.Location = new System.Drawing.Point(6, 3);
+            this.Infotext.Location = new System.Drawing.Point(8, 42);
             this.Infotext.Name = "Infotext";
             this.Infotext.Size = new System.Drawing.Size(199, 13);
             this.Infotext.TabIndex = 4;
@@ -108,8 +109,8 @@ namespace SG_xml
             // 
             // Sökväg
             // 
-            this.Sökväg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.Sökväg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Sökväg.Location = new System.Drawing.Point(4, 25);
             this.Sökväg.Name = "Sökväg";
             this.Sökväg.Size = new System.Drawing.Size(418, 20);
@@ -128,9 +129,9 @@ namespace SG_xml
             // 
             // tabControlSG
             // 
-            this.tabControlSG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlSG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlSG.Controls.Add(this.tabPageXMLReader);
             this.tabControlSG.Controls.Add(this.tabPageExcelWriter);
             this.tabControlSG.Location = new System.Drawing.Point(4, 51);
@@ -141,6 +142,7 @@ namespace SG_xml
             // 
             // tabPageXMLReader
             // 
+            this.tabPageXMLReader.Controls.Add(this.checkBoxTestData);
             this.tabPageXMLReader.Controls.Add(this.LäsInXML);
             this.tabPageXMLReader.Controls.Add(this.Rensa);
             this.tabPageXMLReader.Controls.Add(this.Infotext);
@@ -204,9 +206,9 @@ namespace SG_xml
             // 
             // listViewSelected
             // 
-            this.listViewSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewSelected.CheckBoxes = true;
             this.listViewSelected.GridLines = true;
             this.listViewSelected.Location = new System.Drawing.Point(9, 102);
@@ -254,8 +256,8 @@ namespace SG_xml
             // 
             // textBoxExcelDirectory
             // 
-            this.textBoxExcelDirectory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxExcelDirectory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxExcelDirectory.Location = new System.Drawing.Point(9, 21);
             this.textBoxExcelDirectory.Name = "textBoxExcelDirectory";
             this.textBoxExcelDirectory.Size = new System.Drawing.Size(405, 20);
@@ -271,6 +273,17 @@ namespace SG_xml
             this.labelSaveDirectory.Size = new System.Drawing.Size(170, 13);
             this.labelSaveDirectory.TabIndex = 0;
             this.labelSaveDirectory.Text = "Ange sökväg att spara Excel filer i:";
+            // 
+            // checkBoxTestData
+            // 
+            this.checkBoxTestData.AutoSize = true;
+            this.checkBoxTestData.Location = new System.Drawing.Point(13, 6);
+            this.checkBoxTestData.Name = "checkBoxTestData";
+            this.checkBoxTestData.Size = new System.Drawing.Size(256, 17);
+            this.checkBoxTestData.TabIndex = 6;
+            this.checkBoxTestData.Text = "Testdata, ingen backup av order kommer att ske";
+            this.checkBoxTestData.UseVisualStyleBackColor = true;
+            this.checkBoxTestData.CheckedChanged += new System.EventHandler(this.checkBoxTestData_CheckedChanged);
             // 
             // XMLParser
             // 
@@ -315,6 +328,7 @@ namespace SG_xml
         private System.Windows.Forms.Label labelNumerOfRows;
         private System.Windows.Forms.Label labelCollectedRows;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBoxTestData;
     }
 }
 
