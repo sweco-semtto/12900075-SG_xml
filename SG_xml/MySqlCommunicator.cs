@@ -20,17 +20,17 @@ namespace SG_xml
         /// <summary>
         /// Sökvägen till var skriptet för att få fram dagens datum ligger. 
         /// </summary>
-        protected static string _Url_To_Get_Current_Time = "http://www.sg-systemet.com/bestallning/Gettime.php";
+        protected static string _Url_To_Get_Current_Time = "https://www.sg-systemet.com/bestallning/Gettime.php";
 
         /// <summary>
         /// Sökvägen till var skriptet för få ett nytt ordernummer ligger. 
         /// </summary>
-        protected static string _Url_To_New_Ordernumber = "http://www.sg-systemet.com/bestallning/CreateOrdernumber.php";
+        protected static string _Url_To_New_Ordernumber = "https://www.sg-systemet.com/bestallning/CreateOrdernumber.php";
 
         /// <summary>
         /// Sökvägen till var skriptet för få ett nytt ordernummer ligger. 
         /// </summary>
-        protected static string _Url_To_Backup_Order = "http://www.sg-systemet.com/bestallning/BackupOrder.php";
+        protected static string _Url_To_Backup_Order = "https://www.sg-systemet.com/bestallning/BackupOrder.php";
 
         /// <summary>
         /// Konstant som anger att inget år har mottagits. 
@@ -85,6 +85,10 @@ namespace SG_xml
             // Ersätter å, ä, ö m.fl. till xml-säkra tecken och byter ut & och = så att vi kan skicka argument till PHP. 
             orderInXML = ChangeUTF_8Characters(orderInXML);
             orderInXML = ChangeAmpersandAndEqualsCharacters(orderInXML);
+
+            // Slår på https. 
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             try
             {
